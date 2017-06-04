@@ -33,10 +33,10 @@ namespace TP_Simplex_Azure
                  {
                      ValorVariaveis[0, cont] = "X" + (cont + 1);                         //Adicionando as variaveis na matriz na linha1;
                      if (cont < (Tabela.GetLength(1) - 1))
-                         ValorVariaveis[1, cont] = string.Concat(Tabela[0, cont + 1]);   //Adicionando na linha2 os valores respectivos as variaveis não-básicas;
+                         ValorVariaveis[1, cont] = string.Concat(Math.Round(Tabela[0, cont + 1],2));   //Adicionando na linha2 os valores respectivos as variaveis não-básicas;
                      else
                      {
-                         ValorVariaveis[1, cont] = string.Concat(Tabela[aux, 0]);        //Adicionando na linha2 os valores respectivos as variaveis básicas;
+                         ValorVariaveis[1, cont] = string.Concat(Math.Round(Tabela[aux, 0],2));        //Adicionando na linha2 os valores respectivos as variaveis básicas;
                          aux++;
                      }
                  }
@@ -266,10 +266,11 @@ namespace TP_Simplex_Azure
             for (int cont = 0; cont < ValorVariaveis.GetLength(1); cont++)
             {
                 if (cont < (Tabela.GetLength(1) - 1))
-                    ValorVariaveis[1, cont] = string.Concat(Tabela[0, cont + 1]);   //Adicionando na linha2 os valores respectivos as variaveis não-básicas;
+                    ValorVariaveis[1, cont] = string.Concat(Math.Round(Tabela[0, cont + 1],2));   //Adicionando na linha2 os valores respectivos as variaveis não-básicas;
                 else
+
                 {
-                    ValorVariaveis[1, cont] = string.Concat(Tabela[aux, 0]);        //Adicionando na linha2 os valores respectivos as variaveis básicas;
+                    ValorVariaveis[1, cont] = string.Concat(Math.Round(Tabela[aux, 0],2));        //Adicionando na linha2 os valores respectivos as variaveis básicas;
                     aux++;
                 }
             }
@@ -294,11 +295,11 @@ namespace TP_Simplex_Azure
             {
                 if (L > 0)
                 {
-                    txtresultvalores.resultvalores += txtresultvalores + Environment.NewLine;
+                    txtresultvalores.resultvalores += Environment.NewLine;
                 }
 
                 for (int C = 0; C < ValorVariaveis.GetLength(1); C++)
-                    txtresultvalores.resultvalores += txtresultvalores.resultvalores + " " + (ValorVariaveis[L, C] + "   ");
+                    txtresultvalores.resultvalores += " " + (ValorVariaveis[L, C] + "   ");
             }
             //MessageBox.Show("Pressione ok para para continuar  !!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -313,11 +314,11 @@ namespace TP_Simplex_Azure
                 {
                     if (L > 0)
                     {
-                        txtresultvalores.resultvalores += txtresultvalores + Environment.NewLine;
+                        txtresultvalores.resultvalores += Environment.NewLine;
                     }
 
                     for (int C = 0; C < Tabela.GetLength(1); C++)
-                        txtresultvalores.resultvalores += txtresultvalores.resultvalores + ( Tabela[L, C] + "     ");
+                        txtresultvalores.resultvalores += ( Math.Round(Tabela[L, C],2) + "     ");
                 }
 
             }
@@ -339,9 +340,9 @@ namespace TP_Simplex_Azure
 
                 txtresultvalores = new ParametroFase1();
                 if ((Tabela[0, 0]) < 0)
-                    txtresultvalores.result += "RESPOSTAS:  Z = " + -(Tabela[0, 0]) + ";";
+                    txtresultvalores.result  += "RESPOSTAS:  Z = " + -(Math.Round(Tabela[0, 0],2)) + ";";
                 else
-                    txtresultvalores.result += "RESPOSTAS:  Z = " + (Tabela[0, 0]) + ";";
+                    txtresultvalores.result += "RESPOSTAS:  Z = " + (Math.Round(Tabela[0, 0],2)) + ";";
 
                 for (int L = 0; L < ValorVariaveis.GetLength(0); L++)
                 {
@@ -356,7 +357,7 @@ namespace TP_Simplex_Azure
                             txtresultvalores.resultvalores += (ValorVariaveis[L, C] + "    |    ");
                         if (L == 1)
                             if (float.Parse(ValorVariaveis[L, C]) < 0)
-                                txtresultvalores.resultvalores += 0 + "       ";
+                                txtresultvalores.resultvalores += 0 + "      ";
                             else
                                 txtresultvalores.resultvalores += ValorVariaveis[L, C] + "      ";
 
