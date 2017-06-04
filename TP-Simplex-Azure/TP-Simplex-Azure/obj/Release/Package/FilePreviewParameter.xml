@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="TP-Simplex-Azure" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\rmiranda\\Documents\\GitHub\\TP-Simplex-Azure\\TP-Simplex-Azure\\TP-Simplex-Azure\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\rmiranda\\Documents\\GitHub\\TP-Simplex-Azure\\TP-Simplex-Azure\\TP-Simplex-Azure\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

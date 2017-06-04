@@ -1,0 +1,6 @@
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex-Azure\TP-Simplex-Azure\TP-Simplex-Azure\bin\TP-Simplex-Azure.dll.config
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex-Azure\TP-Simplex-Azure\TP-Simplex-Azure\bin\TP-Simplex-Azure.dll
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex-Azure\TP-Simplex-Azure\TP-Simplex-Azure\bin\TP-Simplex-Azure.pdb
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex-Azure\TP-Simplex-Azure\TP-Simplex-Azure\obj\Release\TP-Simplex-Azure.csprojResolveAssemblyReference.cache
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex-Azure\TP-Simplex-Azure\TP-Simplex-Azure\obj\Release\TP-Simplex-Azure.dll
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex-Azure\TP-Simplex-Azure\TP-Simplex-Azure\obj\Release\TP-Simplex-Azure.pdb

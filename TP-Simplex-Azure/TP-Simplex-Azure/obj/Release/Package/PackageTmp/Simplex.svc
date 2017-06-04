@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="TP_Simplex_Azure.Service1" CodeBehind="Simplex.svc.cs" %>
