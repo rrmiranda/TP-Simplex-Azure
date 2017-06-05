@@ -135,7 +135,7 @@ namespace TP_Simplex_Azure
             //Controle: Verificar estados da tabela(Seguir segunda etapa, Solução Impossível ou Algoritmo de troca);
             //ControleLinha: Verifica se existe valor negativo na Coluna "Menbro Livre";
             //ControleLinha(depois)/ControleColuna: Variaveis que contem valor da Linha Permissiva e Coluna Permissiva;
-            float EP = 0, VerificaEP = Tabela[0, 0];
+            float EP = 0, VerificaEP = (Tabela[0, 0] * Tabela[0, 0]);
             //EP: Elemento Permitido;
             //VerificaEP: Verifica qual é o valor permissivo na tabela, recebendo maior valor na tabela para a verificação mais a frente;
             if (VerificaEP < 0) //Caso valor recebido de VerificaEP seja negativo, necessario coloca-lo positivo para verificação;
@@ -299,7 +299,7 @@ namespace TP_Simplex_Azure
                 }
 
                 for (int C = 0; C < ValorVariaveis.GetLength(1); C++)
-                    txtresultvalores.resultvalores += " " + (ValorVariaveis[L, C] + "   ");
+                    txtresultvalores.resultvalores += (ValorVariaveis[L, C] + "     ");
             }
             //MessageBox.Show("Pressione ok para para continuar  !!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -335,7 +335,7 @@ namespace TP_Simplex_Azure
                     if (L > 0)
 
                         for (int C = 0; C < Tabela.GetLength(1); C++)
-                            txtresultvalores.resultvalores += Environment.NewLine + (Tabela[L, C].ToString("n2") + "     ");
+                            txtresultvalores.resultvalores += Environment.NewLine + (Math.Round(Tabela[L, C],2)+ "      ");
                 }
 
                 txtresultvalores = new ParametroFase1();
@@ -354,12 +354,12 @@ namespace TP_Simplex_Azure
                     for (int C = 0; C < ValorVariaveis.GetLength(1); C++)
                     {
                         if (L == 0)
-                            txtresultvalores.resultvalores += (ValorVariaveis[L, C] + "    |    ");
+                            txtresultvalores.resultvalores += (ValorVariaveis[L, C] + "   |   ");
                         if (L == 1)
                             if (float.Parse(ValorVariaveis[L, C]) < 0)
                                 txtresultvalores.resultvalores += 0 + "      ";
                             else
-                                txtresultvalores.resultvalores += ValorVariaveis[L, C] + "      ";
+                                txtresultvalores.resultvalores +=ValorVariaveis[L, C] + "      ";
 
                     }
                 }
